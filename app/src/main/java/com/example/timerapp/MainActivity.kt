@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun SimpleTimerApp() {
     var timeLeft by remember { mutableStateOf(0) } // Initial time in seconds
-    var inputTime by remember { mutableStateOf(timeLeft.toString()) }
+    var inputTime by remember { mutableStateOf("") }
     var isRunning by remember { mutableStateOf(false) }
 
     LaunchedEffect(isRunning) {
