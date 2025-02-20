@@ -90,7 +90,7 @@ fun SimpleTimerApp() {
                 Text("Pause")
             }
             Spacer(modifier = Modifier.width(8.dp))
-            Button(onClick = { timeLeft = 0; isRunning = false }) {
+            Button(onClick = { timeLeft = inputTime.toIntOrNull() ?: 0; isRunning = false }) {
                 Text("Reset")
             }
         }
